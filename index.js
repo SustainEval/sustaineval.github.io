@@ -1,4 +1,4 @@
-import { bio, projects, education, experience, footer } from "./data.js";
+import { bio, projects, experience, tasks, footer } from "./data.js";
 
 import { URLs } from "./user-data/urls.js";
 
@@ -16,30 +16,6 @@ const { medium, gitConnected } = URLs;
  *
  * @returns {void}
  */
-
-async function fetchBlogsFromMedium(url) {
-  try {
-    const response = await fetch(url);
-    const { items } = await response.json();
-    populateBlogs(items, "blogs");
-  } catch (error) {
-    throw new Error(
-      `Error in fetching the blogs from Medium profile: ${error}`
-    );
-  }
-}
-
-async function fetchGitConnectedData(url) {
-  try {
-    const response = await fetch(url);
-    console.log(response);
-    const { basics } = await response.json();
-    // populateBlogs(items, "blogs");
-    mapBasicResponse(basics);
-  } catch (error) {
-    throw new Error(`Error in fetching the blogs from git connected: ${error}`);
-  }
-}
 
 function mapBasicResponse(basics) {
   const {
@@ -163,7 +139,7 @@ function populateProjects(items, id) {
       divSpan.append(span);
     }
 
-    projectdesign.append(li.cloneNode(true));
+    // projectdesign.append(li.cloneNode(true));
 
     if (i != items.length - 1) {
       projectdesign.append(hr.cloneNode(true));
@@ -184,7 +160,7 @@ function populateProjects(items, id) {
 
 function populateBlogs(items, id) {
   const projectdesign = document.getElementById(id);
-  const count = 3;
+  const count = 2;
 
   for (let i = 0; i < count; i++) {
     const h4 = document.createElement("h4");
@@ -192,14 +168,12 @@ function populateBlogs(items, id) {
     h4.innerHTML = items[i].title;
 
     const a = document.createElement("a");
-    a.href = items[i].link;
     a.target = "_blank";
     a.append(h4);
 
-    const pubDateEle = document.createElement("p");
-    pubDateEle.className = "publish-date";
-    pubDateEle.innerHTML = getBlogDate(items[i].pubDate);
-    a.append(pubDateEle);
+    const evaluationEle = document.createElement("p");
+    evaluationEle.className = "evaluation-text";
+    evaluationEle.innerHTML = `<strong>Evaluation:</strong> ${items[i].evaluation}`; // Fetter Text
 
     const divResumeContentRight = document.createElement("div");
     divResumeContentRight.className = "resume-content";
@@ -207,27 +181,18 @@ function populateBlogs(items, id) {
 
     const p = document.createElement("p");
     p.className = "project-description";
-    const html = items[i].content;
-    const [, doc] = /<p>(.*?)<\/p>/g.exec(html) || [];
-    p.innerHTML = doc;
-
-    const divSpan = document.createElement("div");
-    for (const category of items[i].categories) {
-      const span = document.createElement("span");
-      span.className = "badge badge-secondary";
-      span.innerHTML = category;
-      divSpan.append(span);
-    }
+    const context = items[i].content;
+    p.innerHTML = context; // doc;
 
     const divSubHeading = document.createElement("div");
     divSubHeading.className = "sub-heading";
-    divSubHeading.append(p, divSpan);
+    divSubHeading.append(p);
     divResumeContentRight.append(divSubHeading);
 
     const divResumeItem = document.createElement("div");
     divResumeItem.className = "resume-item";
     divResumeItem.append(divResumeContentRight);
-    a.append(divResumeItem);
+    a.append(divResumeItem, evaluationEle);
 
     const divProjectCard = document.createElement("div");
     divProjectCard.className = "project-card";
@@ -258,11 +223,12 @@ function populateExp_Edu(items, id) {
   let mainContainer = document.getElementById(id);
 
   for (let i = 0; i < items.length; i++) {
-    let spanTimelineSublabel = document.createElement("span");
-    spanTimelineSublabel.className = "timeline-sublabel";
-    spanTimelineSublabel.innerHTML = items[i].subtitle;
+    // let spanTimelineSublabel = document.createElement("span");
+    // spanTimelineSublabel.className = "timeline-sublabel";
+    // spanTimelineSublabel.innerHTML = items[i].subtitle;
 
     let spanh2 = document.createElement("span");
+    spanh2.className = "timeline-duration";
     spanh2.innerHTML = items[i].duration;
 
     let h2TimelineLabel = document.createElement("h2");
@@ -272,23 +238,23 @@ function populateExp_Edu(items, id) {
     let divTimelineLabel = document.createElement("div");
     divTimelineLabel.className = "timeline-label";
     divTimelineLabel.append(h2TimelineLabel);
-    divTimelineLabel.append(spanTimelineSublabel);
+    // divTimelineLabel.append(spanTimelineSublabel);
 
-    for (let j = 0; j < items[i].details.length; j++) {
-      let pTimelineText = document.createElement("p");
-      pTimelineText.className = "timeline-text";
-      pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
-      divTimelineLabel.append(pTimelineText);
-    }
+    // for (let j = 0; j < items[i].details.length; j++) {
+    //   let pTimelineText = document.createElement("p");
+    //   pTimelineText.className = "timeline-text";
+    //   pTimelineText.innerHTML = "&blacksquare; " + items[i].details[j];
+    //   divTimelineLabel.append(pTimelineText);
+    // }
 
-    let divTags = document.createElement("div");
-    for (let j = 0; j < items[i].tags.length; j++) {
-      let spanTags = document.createElement("span");
-      spanTags.className = "badge badge-secondary";
-      spanTags.innerHTML = items[i].tags[j];
-      divTags.append(spanTags);
-    }
-    divTimelineLabel.append(divTags);
+    // let divTags = document.createElement("div");
+    // for (let j = 0; j < items[i].tags.length; j++) {
+    //   let spanTags = document.createElement("span");
+    //   spanTags.className = "badge badge-secondary";
+    //   spanTags.innerHTML = items[i].tags[j];
+    //   divTags.append(spanTags);
+    // }
+    // divTimelineLabel.append(divTags);
 
     let iFa = document.createElement("i");
     iFa.className = "fa fa-" + items[i].icon;
@@ -429,8 +395,8 @@ function getBlogDate(publishDate) {
 
 populateBio(bio, "bio");
 
-fetchBlogsFromMedium(medium);
-fetchGitConnectedData(gitConnected);
+// fetchBlogsFromMedium(medium);
+// fetchGitConnectedData(gitConnected);
 
 populateProjects(webProjects, "web-projects");
 populateProjects(softwareProjects, "software-projects");
@@ -438,6 +404,7 @@ populateProjects(androidProjects, "android-projects");
 populateProjects(freelanceProjects, "freelance-projects");
 
 populateExp_Edu(experience, "experience");
-populateExp_Edu(education, "education");
+// populateExp_Edu(education, "education");
+populateBlogs(tasks, "tasks");
 
 populateLinks(footer, "footer");

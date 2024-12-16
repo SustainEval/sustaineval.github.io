@@ -58,7 +58,10 @@
               <img alt="profile-img" src="images/logo.png" />
             </div>
             <h1 id="colorlib-logo">
-              <a href="./index.html">SustainEval Shard Task 2025</a>
+              <a href="./index.html"
+                >SustainEval <br />
+                Shard Task 2025</a
+              >
             </h1>
           </div>
           <nav
@@ -70,21 +73,24 @@
             <div id="navbar" class="collapse">
               <ul>
                 <li><a href="#" data-nav-section="about">About</a></li>
+                <li><a href="#" data-nav-section="data-example">Data Example</a></li>
                 <li>
-                  <a href="#" data-nav-section="registration">Registration</a>
+                  <a href="#" data-nav-section="important_dates"
+                    >Important Dates</a
+                  >
                 </li>
+                <li><a href="#" data-nav-section="tasks">Subtasks</a></li>
                 <li><a href="#" data-nav-section="projects">Projects</a></li>
-                <li><a href="#" data-nav-section="blogs">Blogs</a></li>
-                <li>
-                  <a href="#" data-nav-section="experience">Work Experience</a>
-                </li>
-                <li><a href="#" data-nav-section="education">Education</a></li>
                 <li><a href="#" data-nav-section="contact">Contact</a></li>
+                <li>
+                  <a href="#" data-nav-section="references">References</a>
+                </li>
               </ul>
             </div>
           </nav>
         </aside>
         <div id="colorlib-main">
+          <!--------------------[START] About---------------------------->
           <section class="colorlib-about" data-section="about">
             <div class="colorlib-narrow-content">
               <div class="row animate-box" data-animate-effect="fadeInLeft">
@@ -95,8 +101,64 @@
               </div>
             </div>
           </section>
-          <!--------------------[END] About me---------------------------->
-          <section class="colorlib-registration" data-section="registration">
+          <!--------------------[END] About---------------------------->
+          <!--------------------[START] Data Example--------------------------->
+          <section class="colorlib-contact" data-section="data-example">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>Data Example</h1>
+                  <div>The training data will consist of text snippets from sustainability reports, along with their corresponding content classification labels. Each snippet is 3–5 sentences long and represents different reporting criteria sections such as "Ressourcenmanagement" or "Wesentlichkeit". Furthermore the last sentence of the snippet is annotated regarding it's verifiability. A sample snippet and its classification might look like this:</div>
+                  <img alt="data-example" src="images/data_example.png" height="300"/>
+                </div>
+
+              </div>
+            </div>
+          </section>
+          <!--------------------[END] Data Example----------------------------->
+          <!--------------------[START] Important Dates------------------->
+          <section class="colorlib-experience" data-section="important_dates">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>Important <span style="color: #96acc1">Dates</span></h1>
+                </div>
+              </div>
+              <div class="timeline-centered" id="experience"></div>
+            </div>
+          </section>
+          <!--------------------[END] Important Dates--------------------->
+          <!--------------------[START] Tasks----------------------------->
+          <section class="colorlib-blogs no-print" data-section="tasks">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>Subtasks</h1>
+                </div>
+              </div>
+              <ul
+                id="accordion"
+                class="accordion animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <li class="open">
+                  <ul id="tasks" class="submenu" style="display: block"></ul>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!--------------------[END] Tasks------------------------------->
+          <!-- ------------------[START] Registration ---------------------------->
+          <!-- <section class="colorlib-registration" data-section="registration">
             <div class="colorlib-narrow-content">
               <div
                 class="row row-bottom-padded-sm animate-box"
@@ -136,7 +198,8 @@
                 </div>
               </div>
             </div>
-          </section>
+          </section> -->
+          <!--------------------[END] Registration -------------------------->
           <!--------------------[START] Projects-------------------------->
           <section class="colorlib-projects no-print" data-section="projects">
             <div class="colorlib-narrow-content">
@@ -185,66 +248,6 @@
             </div>
           </section>
           <!--------------------[END] Projects---------------------------->
-          <!--------------------[START] Blogs----------------------------->
-          <section class="colorlib-blogs no-print" data-section="blogs">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Latest <span style="color: #93cbe6">Blogs</span></h1>
-                </div>
-              </div>
-              <ul
-                id="accordion"
-                class="accordion animate-box"
-                data-animate-effect="fadeInLeft"
-              >
-                <li class="open">
-                  <ul id="blogs" class="submenu" style="display: block"></ul>
-                </li>
-                <a
-                  class="readmore"
-                  href="https://vinaysomawat.medium.com/"
-                  target="_blank"
-                >
-                  <p>Read more &RightArrow;</p>
-                </a>
-              </ul>
-            </div>
-          </section>
-          <!--------------------[END] Blogs------------------------------->
-          <!--------------------[START] Work Experience------------------->
-          <section class="colorlib-experience" data-section="experience">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Work <span style="color: #93cbe6">Experience</span></h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="experience"></div>
-            </div>
-          </section>
-          <!--------------------[END] Work Experience--------------------->
-          <!--------------------[START] Education------------------------->
-          <section class="colorlib-education" data-section="education">
-            <div class="colorlib-narrow-content">
-              <div
-                class="row row-bottom-padded-sm animate-box fadeInLeft animated"
-                data-animate-effect="fadeInLeft"
-              >
-                <div class="about-desc">
-                  <h1>Education</h1>
-                </div>
-              </div>
-              <div class="timeline-centered" id="education"></div>
-            </div>
-          </section>
-          <!--------------------[END] Education--------------------------->
           <!--------------------[START] Contact--------------------------->
           <section class="colorlib-contact" data-section="contact">
             <div class="colorlib-narrow-content">
@@ -255,15 +258,52 @@
                 <div class="about-desc">
                   <h1>Contact</h1>
                 </div>
-                <p>
-                  Feel free to email me at vinaysomawat40@gmail.com for tech
-                  discussions, business opportunities, or just to say hello—I’d
-                  love to hear from you!
-                </p>
+                  <ul class="contact-list"></ul>
+                    <li>
+                      Jakob Prange, Universität Augsburg (jakob.prange@uni-a.de)
+                    </li>
+                    <li>Charlott Jakob, TU Berlin (c.jakob@tu-berlin.de)</li>
+                    <li>
+                      Annemarie Friedrich, Universität Augsburg
+                      (annemarie.friedrich@informatik.uni-augsburg.de)
+                    </li>
+                  </ul>
               </div>
             </div>
           </section>
           <!--------------------[END] Contact----------------------------->
+          <!--------------------[START] References----------------------------->
+          <section class="colorlib-blogs no-print" data-section="references">
+            <div class="colorlib-narrow-content">
+              <div
+                class="row row-bottom-padded-sm animate-box"
+                data-animate-effect="fadeInLeft"
+              >
+                <div class="about-desc">
+                  <h1>References</h1>
+                </div>
+              </div>
+                  <ul class="references-list"></ul>
+                    <li>
+                      Bingler, J. A., Kraus, M., Leippold, M., & Webersinke, N.
+                      (2024). How cheap talk in climate disclosures relates to
+                      climate initiatives, corporate emissions, and reputation
+                      risk. Journal of Banking & Finance, 164, 107191.
+                    </li>
+                    <li>
+                      Diggelmann, T., et al. (2020). Climate-FEVER: A dataset
+                      for verification of real-world climate claims. arXiv
+                      preprint arXiv:2012.00614.
+                    </li>
+                    <li>
+                      Schimanski, T., et al. (2023). ClimateBERT-netzero:
+                      Detecting and assessing net-zero and reduction targets.
+                      arXiv preprint arXiv:2310.08096.
+                    </li>
+                  </ul>
+            </div>
+          </section>
+          <!--------------------[END] References----------------------------->
           <!--------------------[START] Footer---------------------------->
           <section class="colorlib-footer no-print" data-section="footer">
             <div class="colorlib-narrow-content">
