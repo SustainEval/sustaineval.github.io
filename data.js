@@ -95,14 +95,14 @@ export const tasks = [
     link: "https://example.com/task1",
     content:
       "Participants are tasked with assigning a content class to text snippets from sustainability reports. The text snippets are sampled from different sections of German-language company reports indexed in the German Sustainability Code (DNK). Each snippet corresponds to one of the predefined reporting criteria in DNK, and the goal is to classify the snippet according to its corresponding criterion section.",
-    evaluation: "Accuracy, F1 score (per-class, macro, and hierarchical).",
+    evaluation: "Accuracy",
   },
   {
     title: "Task B: Verifiability Rating",
     link: "https://example.com/task2",
     content:
       "This task focuses on rating the verifiability of the last sentence in each text snippet, with the prior sentences serving as context. The verifiability score is assigned on a scale from 0.0 (not verifiable) to 1.0 (clearly verifiable). The task is evaluated by the Kendall τ rank correlation with human ratings.",
-    evaluation: "Kendall τ rank correlation with human verifiability ratings.",
+    evaluation: "Kendall τ rank correlation (version B)",
   },
 ];
 

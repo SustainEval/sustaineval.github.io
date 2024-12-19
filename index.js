@@ -399,12 +399,24 @@ populateBio(bio, "bio");
 // fetchGitConnectedData(gitConnected);
 
 populateProjects(webProjects, "web-projects");
-populateProjects(softwareProjects, "software-projects");
-populateProjects(androidProjects, "android-projects");
-populateProjects(freelanceProjects, "freelance-projects");
+// populateProjects(softwareProjects, "software-projects");
+// populateProjects(androidProjects, "android-projects");
+// populateProjects(freelanceProjects, "freelance-projects");
 
 populateExp_Edu(experience, "experience");
 // populateExp_Edu(education, "education");
 populateBlogs(tasks, "tasks");
 
 populateLinks(footer, "footer");
+
+// Select all links in the accordion
+const accordionLinks = document.querySelectorAll(".accordion .link");
+
+// Add click event listener to each link
+accordionLinks.forEach((link) => {
+  link.addEventListener("click", function () {
+    const submenu = this.nextElementSibling; // Get the next sibling (the submenu)
+    submenu.style.display =
+      submenu.style.display === "block" ? "none" : "block"; // Toggle display
+  });
+});
