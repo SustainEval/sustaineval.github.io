@@ -223,10 +223,6 @@ function populateExp_Edu(items, id) {
   let mainContainer = document.getElementById(id);
 
   for (let i = 0; i < items.length; i++) {
-    // let spanTimelineSublabel = document.createElement("span");
-    // spanTimelineSublabel.className = "timeline-sublabel";
-    // spanTimelineSublabel.innerHTML = items[i].subtitle;
-
     let spanh2 = document.createElement("span");
     spanh2.className = "timeline-duration";
     spanh2.innerHTML = items[i].duration;
@@ -238,7 +234,14 @@ function populateExp_Edu(items, id) {
     let divTimelineLabel = document.createElement("div");
     divTimelineLabel.className = "timeline-label";
     divTimelineLabel.append(h2TimelineLabel);
-    // divTimelineLabel.append(spanTimelineSublabel);
+
+    if (items[i].subtitle !== "") {
+      let spanTimelineSublabel = document.createElement("span");
+      spanTimelineSublabel.className = "timeline-sublabel";
+      spanTimelineSublabel.innerHTML = items[i].subtitle;
+
+      divTimelineLabel.append(spanTimelineSublabel); // Append only if subtitle is valid
+    }
 
     // for (let j = 0; j < items[i].details.length; j++) {
     //   let pTimelineText = document.createElement("p");
@@ -410,13 +413,24 @@ populateBlogs(tasks, "tasks");
 populateLinks(footer, "footer");
 
 // Select all links in the accordion
+// Select all links in the accordion
+// Select all links in the accordion
 const accordionLinks = document.querySelectorAll(".accordion .link");
 
 // Add click event listener to each link
-accordionLinks.forEach((link) => {
+accordionLinks.forEach((link, index) => {
   link.addEventListener("click", function () {
-    const submenu = this.nextElementSibling; // Get the next sibling (the submenu)
-    submenu.style.display =
-      submenu.style.display === "block" ? "none" : "block"; // Toggle display
+    const answer = this.nextElementSibling; // Get the next sibling (the answer)
+
+    // Toggle the answer visibility
+    if (answer.classList.contains("hidden")) {
+      answer.classList.remove("hidden");
+      this.classList.remove("with-border");
+    } else {
+      answer.classList.add("hidden");
+      if (index < accordionLinks.length - 1) {
+        this.classList.add("with-border");
+      }
+    }
   });
 });

@@ -50,18 +50,18 @@ export const experience = [
   {
     title: "Training & Development Data Release",
     duration: "14th March 2025",
-    subtitle: "",
+    subtitle: "..link to the dataset will be here..",
     details: [],
     tags: [],
-    icon: "truck ",
+    icon: "",
   },
   {
     title: "Registration Deadline / Start Evaluation Phase",
     duration: "10th June 2025",
-    subtitle: "",
+    subtitle: "..link to registration will be here..",
     details: [],
     tags: [],
-    icon: "heartbeat",
+    icon: "",
   },
   {
     title: "System/Results Submission Deadline",
@@ -69,7 +69,7 @@ export const experience = [
     subtitle: "",
     details: [],
     tags: [],
-    icon: "heartbeat",
+    icon: "",
   },
   {
     title: "System Paper Submission Deadline",
@@ -77,7 +77,7 @@ export const experience = [
     subtitle: "",
     details: [],
     tags: [],
-    icon: "heartbeat",
+    icon: "",
   },
   {
     title: "Workshop & Final Presentation",
@@ -85,7 +85,7 @@ export const experience = [
     subtitle: "",
     details: [],
     tags: [],
-    icon: "heartbeat",
+    icon: "",
   },
 ];
 

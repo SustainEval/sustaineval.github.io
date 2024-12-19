@@ -80,7 +80,7 @@
                   >
                 </li>
                 <li><a href="#" data-nav-section="tasks">Subtasks</a></li>
-                <li><a href="#" data-nav-section="projects">Projects</a></li>
+                <li><a href="#" data-nav-section="q_and_a">Questions & Answers</a></li>
                 <li><a href="#" data-nav-section="contact">Contact</a></li>
                 <li>
                   <a href="#" data-nav-section="references">References</a>
@@ -112,13 +112,20 @@
                 <div class="about-desc">
                   <h1>Data Example</h1>
                   <div>The training data will consist of text snippets from sustainability reports, along with their corresponding content classification labels. Each snippet is 3–5 sentences long and represents different reporting criteria sections such as "Ressourcenmanagement" or "Wesentlichkeit". Furthermore the last sentence of the snippet is annotated regarding it's verifiability. A sample snippet and its classification might look like this:</div>
-                  <img alt="data-example" src="images/data_example.png" height="300"/>
+                  <div class="content-container">
+                  <img src="images/data_example.png" alt="data-example" class="content-image" />
+                  <div class="content-text">
+                    <p>Content Classification: </br><span class="label-highlight">Rules and Processes</span></p>
+                    <p>Verifiability Rating: </br><span class="label-highlight">0.34</span></p>
+                  </div>
+                </div>
                 </div>
 
               </div>
             </div>
           </section>
           <!--------------------[END] Data Example----------------------------->
+
           <!--------------------[START] Important Dates------------------->
           <section class="colorlib-experience" data-section="important_dates">
             <div class="colorlib-narrow-content">
@@ -153,8 +160,49 @@
                 <li class="open">
                   <ul id="tasks" class="submenu" style="display: block"></ul>
                 </li>
+
+
               </ul>
-            </div>
+            
+      <table>
+        <tr>
+            <th>Strategie</th>
+            <th>Prozessmanagement</th>
+            <th>Umwelt</th>
+            <th>Gesellschaft</th>
+        </tr>
+        <tr>
+            <td>
+                1. Strategic Analysis and Action<br>
+                2. Materiality<br>
+                3. Objectives<br>
+                4. Depth of the Value Chain
+            </td>
+            <td>
+                5. Responsibility<br>
+                6. Rules and Processes<br>
+                7. Control<br>
+                8. Incentive Systems<br>
+                9. Stakeholder Engagement<br>
+                10. Innovation and Product Management
+            </td>
+            <td>
+                11. Usage of Natural Resources<br>
+                12. Resource Management<br>
+                13. Climate-Relevant Emissions
+            </td>
+            <td>
+                14. Employment Rights<br>
+                15. Equal Opportunities<br>
+                16. Qualifications<br>
+                17. Human Rights<br>
+                18. Corporate Citizenship<br>
+                19. Political Influence<br>
+                20. Conduct that Complies with the Law and Policy
+            </td>
+        </tr>
+    </table>
+    </div>
           </section>
           <!--------------------[END] Tasks------------------------------->
           <!-- ------------------[START] Registration ---------------------------->
@@ -201,14 +249,14 @@
           </section> -->
           <!--------------------[END] Registration -------------------------->
           <!--------------------[START] Projects-------------------------->
-          <section class="colorlib-projects no-print" data-section="projects">
+          <section class="colorlib-projects no-print" data-section="q_and_a">
             <div class="colorlib-narrow-content">
               <div
                 class="row row-bottom-padded-sm animate-box"
                 data-animate-effect="fadeInLeft"
               >
                 <div class="about-desc">
-                  <h1>Projects</h1>
+                  <h1>Questions & Answers</h1>
                 </div>
               </div>
               <ul
@@ -217,20 +265,25 @@
                 data-animate-effect="fadeInLeft"
               >
                 <li>
-                  <div class="link">
-                    <p style="margin-bottom: 0px">WWhat is SustainEval 2025?</p>
+                  <div class="link with-border">
+                    <p style="margin-bottom: 0px">Which models can I use for the competition?</p>
                     <i class="fa fa-chevron-down"></i>
                   </div>
-                  <!-- <ul id="web-projects" class="submenu"></ul> -->
-                   <div style="display: none;">The SustainEval 2025 is a shared task focused on analyzing sustainability reports.</div>
+                  <div class="answer hidden">In order to promote diversity of modeling approaches in a fair manner, we offer several tracks, which enforce increasing limitations. Everyone automatically competes in the Open Track, where any data may be used as training data, except additional DNK reports, as these may include parts of the evaluation data, and any open-weights model may be used, including pre-trained LLMs. If the used external resources (models, data) are all compliant with a list of reproducible re-sources we will compile and publish by March 2025, participants also compete in the Reproducible Track. </div>
+                </li>
+                <li>
+                  <div class="link with-border">
+                    <p style="margin-bottom: 0px">How can I participate?</p>
+                    <i class="fa fa-chevron-down"></i>
+                  </div>
+                  <div class="answer hidden" >You can register on our website and submit your analysis.</div>
                 </li>
                 <li>
                   <div class="link">
-                    <p style="margin-bottom: 0px">Frage Zwei</p>
+                    <p style="margin-bottom: 0px">Will special prizes be awarded?</p>
                     <i class="fa fa-chevron-down"></i>
                   </div>
-                  <!-- <ul id="web-projects" class="submenu"></ul> -->
-                   <div style="display: none;" >The SustainEval 2025 is a shared task focused on analyzing sustainability reports.</div>
+                  <div class="answer hidden">Prizes will be awarded for the best overall performance and for special achievements such as sustainability-focused models, insightful analysis, and interdisciplinary approaches.</div>
                 </li>
               </ul>
             </div>
@@ -244,7 +297,7 @@
                 data-animate-effect="fadeInLeft"
               >
                 <div class="about-desc">
-                  <h1>Contacts</h1>
+                  <h1>Contact</h1>
                 </div>
               </div>
                   <ul class="contact-list"></ul>
