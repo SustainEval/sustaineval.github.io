@@ -278,18 +278,18 @@ function populateExp_Edu(items, id) {
     mainContainer.append(article);
   }
 
-  let divTimelineIcon = document.createElement("div");
-  divTimelineIcon.className = "timeline-icon color-2";
+  // let divTimelineIcon = document.createElement("div");
+  // divTimelineIcon.className = "timeline-icon color-2";
 
-  let divTimelineEntryInner = document.createElement("div");
-  divTimelineEntryInner.className = "timeline-entry-inner";
-  divTimelineEntryInner.append(divTimelineIcon);
+  // let divTimelineEntryInner = document.createElement("div");
+  // divTimelineEntryInner.className = "timeline-entry-inner";
+  // divTimelineEntryInner.append(divTimelineIcon);
 
-  let article = document.createElement("article");
-  article.className = "timeline-entry begin animate-box";
-  article.append(divTimelineEntryInner);
+  // let article = document.createElement("article");
+  // article.className = "timeline-entry begin animate-box";
+  // article.append(divTimelineEntryInner);
 
-  mainContainer.append(article);
+  // mainContainer.append(article);
 }
 
 /**
@@ -408,7 +408,7 @@ populateProjects(webProjects, "web-projects");
 
 populateExp_Edu(experience, "experience");
 // populateExp_Edu(education, "education");
-populateBlogs(tasks, "tasks");
+// populateBlogs(tasks, "tasks");
 
 populateLinks(footer, "footer");
 

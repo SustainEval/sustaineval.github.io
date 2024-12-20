@@ -43,7 +43,7 @@ body {
 }
 
 a {
-  color: #96acc1;
+  /* color: #96acc1; */
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -72,6 +72,10 @@ h6 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 400;
   margin: 0 0 30px 0;
+}
+
+h1 {
+  font-size: 2em;
 }
 
 h2 {
@@ -2334,14 +2338,15 @@ table {
   border-collapse: collapse;
   text-align: left;
   table-layout: fixed;
+  color: black;
 }
 th,
 td {
-  border: 1px solid #000;
-  padding: 10px;
+  border: 0.8px solid #000;
+  padding: 5px;
 }
 th {
-  background-color: #f4f4f4;
+  /* background-color: #f4f4f4; */
   font-size: 0.9em;
 }
 td {
@@ -2349,4 +2354,10 @@ td {
 }
 tr:nth-child(2) td {
   font-size: 0.7em;
+}
+table tr:first-child th {
+  font-weight: normal; /* Set font weight to normal */
+}
+evaluation-text {
+  margin-top: 15px;
 }
