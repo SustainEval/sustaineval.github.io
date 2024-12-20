@@ -3,49 +3,6 @@ export const bio = [
   "",
 ];
 
-export const projects = {
-  webProjects: [
-    {
-      projectName: "Programming Diaries",
-      image: "images/programmingdiaries.png",
-      summary:
-        "Developed a full stack blog application to provide content on techical topics across the internet with admin interface.",
-      preview: "https://programmingdiaries.herokuapp.com/",
-      techStack: ["Django", "SQLite", "Bootstrap", "JavaScript", "Heroku"],
-    },
-  ],
-  softwareProjects: [
-    {
-      projectName: "Pizza Ordering ChatBot",
-      image: "images/pizzaorderchatbot.png",
-      summary:
-        "ChatBot using Dialogflow, Firebase database which stores the chat data in the realtime database.",
-      preview: "https://github.com/vinaysomawat/Pizza-Ordering-ChatBot",
-      techStack: ["Dailogflow", "Firebase"],
-    },
-  ],
-  androidProjects: [
-    {
-      projectName: "NITW-CSE",
-      image: "images/nitwcse.jpg",
-      summary:
-        "The Application display details of Department courses, reference books, research, publication and faculty profile.",
-      preview: "https://github.com/vinaysomawat/NITW-CSE",
-      techStack: ["JAVA", "XML", "Android"],
-    },
-  ],
-  freelanceProjects: [
-    {
-      projectName: "SnylloAir.com",
-      image: "images/snylloair.png",
-      summary:
-        "Developed a company website to showcase the purpose, services and products provided by the company to audience.",
-      preview: "https://www.snylloair.com/",
-      techStack: ["Bootstrap", "JavaScript", "AWS-S3"],
-    },
-  ],
-};
-
 export const experience = [
   {
     title: "Training & Development Data Release",
@@ -108,23 +65,23 @@ export const tasks = [
 
 export const footer = [
   {
-    label: "Links",
+    label: "",
     data: [
       {
-        text: "Buy me a coffee",
-        link: "https://www.buymeacoffee.com/r194dME8y",
+        text: "",
+        link: "",
       },
       {
-        text: "Github/vinaysomawat.github.io",
-        link: "https://github.com/vinaysomawat/vinaysomawat.github.io",
+        text: "",
+        link: "",
       },
     ],
   },
   {
-    label: "copyright-text",
+    label: "",
     data: [
-      "Made with &hearts; by Vinay Somawat.",
-      "&copy; No Copyrights. Feel free to use this template.",
+      "",
+      "",
     ],
   },
 ];
