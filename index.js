@@ -1,10 +1,11 @@
-import { bio, projects, experience, tasks, footer } from "./data.js";
+import { bio, experience, tasks, footer } from "./data.js";
 
 import { URLs } from "./user-data/urls.js";
 
-const { webProjects, softwareProjects, androidProjects, freelanceProjects } =
-  projects;
-const { medium, gitConnected } = URLs;
+/** const { webProjects, softwareProjects, androidProjects, freelanceProjects } =
+  projects; 
+const { medium, gitConnected } = URLs; 
+*/
 
 /**
  * Fetches blogs from Medium profile.
@@ -401,7 +402,7 @@ populateBio(bio, "bio");
 // fetchBlogsFromMedium(medium);
 // fetchGitConnectedData(gitConnected);
 
-populateProjects(webProjects, "web-projects");
+// populateProjects(webProjects, "web-projects");
 // populateProjects(softwareProjects, "software-projects");
 // populateProjects(androidProjects, "android-projects");
 // populateProjects(freelanceProjects, "freelance-projects");
