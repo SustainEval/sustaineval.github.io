@@ -242,6 +242,7 @@ function populateExp_Edu(items, id) {
       linkTimelineSublabel.className = "timeline-sublabel";
       linkTimelineSublabel.href = items[i].link; // Set the link URL
       linkTimelineSublabel.innerHTML = items[i].link; // Set the link text
+      linkTimelineSublabel.className = "on_blue underline";
 
       let icon = document.createElement("img");
       icon.src = "images/link_arrow.png"; // Set the source of the icon

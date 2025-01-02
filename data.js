@@ -1,5 +1,5 @@
 export const bio = [
-  "SustainEval 2025 is an official GermEval shared task co-located with the KONVENS 2025 conference and sponsored by GSCL. It challenges participants to analyze sustainability reports in German. This shared task focuses on two key aspects of sustainability reporting: content classification and claim verifiability. Participants will have the opportunity to explore various machine learning and natural language processing methods to address these challenges.",
+  'SustainEval 2025 is an official GermEval shared task co-located with the <a class="underline" href="https://konvens-2025.hs-hannover.de/">KONVENS 2025</a> conference and sponsored by GSCL. It challenges participants to analyze German sustainability reports by focusing on two key aspects: content and verifiability. Participants have the opportunity to explore various ML and NLP methods to address these challenges.',
   "",
 ];
 

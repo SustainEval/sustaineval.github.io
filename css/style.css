@@ -48,12 +48,21 @@ a {
   -o-transition: 0.5s;
   transition: 0.5s;
 }
+a.underline {
+  text-decoration: underline !important;
+}
+
 a:hover,
 a:active,
 a:focus {
+  color: #96acc1;
+  outline: none;
+}
+a.on_blue:hover,
+a.on_blue:active,
+a.on_blue:focus {
   color: #fff;
   outline: none;
-  text-decoration: none !important;
 }
 
 p {
@@ -2328,7 +2337,7 @@ footer ul {
 }
 
 .content-container {
-  margin: 20px 30px 0 0;
+  margin: 20px 30px 20px 0;
   display: flex; /* Use flexbox to align items */
   align-items: center; /* Center items vertically */
 }
