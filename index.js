@@ -236,12 +236,22 @@ function populateExp_Edu(items, id) {
     divTimelineLabel.className = "timeline-label";
     divTimelineLabel.append(h2TimelineLabel);
 
-    if (items[i].subtitle !== "") {
-      let spanTimelineSublabel = document.createElement("span");
-      spanTimelineSublabel.className = "timeline-sublabel";
-      spanTimelineSublabel.innerHTML = items[i].subtitle;
+    if (items[i].link !== "") {
+      // Create a link element
+      let linkTimelineSublabel = document.createElement("a");
+      linkTimelineSublabel.className = "timeline-sublabel";
+      linkTimelineSublabel.href = items[i].link; // Set the link URL
+      linkTimelineSublabel.innerHTML = items[i].link; // Set the link text
 
-      divTimelineLabel.append(spanTimelineSublabel); // Append only if subtitle is valid
+      let icon = document.createElement("img");
+      icon.src = "images/link_arrow.png"; // Set the source of the icon
+      icon.alt = "Link icon"; // Add alt text for accessibility
+      icon.className = "img_link_arrow";
+
+      // Append the icon to the link
+      linkTimelineSublabel.prepend(icon); // Add the icon before the link text
+
+      divTimelineLabel.append(linkTimelineSublabel); // Append the link to the label
     }
 
     // for (let j = 0; j < items[i].details.length; j++) {

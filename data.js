@@ -7,15 +7,15 @@ export const experience = [
   {
     title: "Training & Development Data Release",
     duration: "14th March 2025",
-    subtitle: "..link to the dataset will be here..",
+    link: "https://github.com/SustainEval/sustaineval2025_data",
     details: [],
     tags: [],
     icon: "",
   },
   {
-    title: "Registration Deadline / Start Evaluation Phase",
+    title: "Registration Deadline",
     duration: "10th June 2025",
-    subtitle: "..link to registration will be here..",
+    link: "..link to registration will be here..",
     details: [],
     tags: [],
     icon: "",
@@ -23,7 +23,7 @@ export const experience = [
   {
     title: "System/Results Submission Deadline",
     duration: "27th June 2025",
-    subtitle: "",
+    link: "",
     details: [],
     tags: [],
     icon: "",
@@ -31,7 +31,7 @@ export const experience = [
   {
     title: "System Paper Submission Deadline",
     duration: "11th July 2025",
-    subtitle: "",
+    link: "",
     details: [],
     tags: [],
     icon: "",
@@ -39,7 +39,7 @@ export const experience = [
   {
     title: "Workshop & Final Presentation",
     duration: "10th September 2025",
-    subtitle: "",
+    link: "",
     details: [],
     tags: [],
     icon: "",
@@ -79,9 +79,6 @@ export const footer = [
   },
   {
     label: "",
-    data: [
-      "",
-      "",
-    ],
+    data: ["", ""],
   },
 ];

@@ -43,7 +43,7 @@ body {
 }
 
 a {
-  /* color: #96acc1; */
+  color: black;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -51,7 +51,7 @@ a {
 a:hover,
 a:active,
 a:focus {
-  color: #96acc1;
+  color: #fff;
   outline: none;
   text-decoration: none !important;
 }
@@ -910,6 +910,7 @@ body.offcanvas .colorlib-nav-toggle {
 .timeline-duration {
   color: white !important;
   opacity: 1 !important;
+  margin-left: 7px;
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
@@ -953,8 +954,17 @@ body.offcanvas .colorlib-nav-toggle {
   .timeline-entry-inner
   .timeline-label
   .timeline-sublabel {
-  font-weight: 600;
+  font-weight: 400;
   margin: 0 0px 0px;
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  /* color: black; Set text color */
+}
+
+.img_link_arrow {
+  height: 13px;
+  width: 13px;
+  margin-right: 5px;
 }
 
 .timeline-centered
@@ -981,7 +991,7 @@ body.offcanvas .colorlib-nav-toggle {
   opacity: 0.4;
   -ms-filter: alpha(opacity=40);
   filter: alpha(opacity=40);
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 .services {
