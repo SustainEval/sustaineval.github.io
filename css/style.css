@@ -95,6 +95,11 @@ h4 {
   margin: 0 0 30px 0;
 }
 
+.bold {
+  font-weight: 900;
+  text-shadow: 0.3px 0.3px 0px rgba(0, 0, 0, 0.5);
+}
+
 figure {
   margin-bottom: 2.5em;
   float: left;
