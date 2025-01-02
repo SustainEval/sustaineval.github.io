@@ -2371,3 +2371,33 @@ table tr:first-child th {
 evaluation-text {
   margin-top: 15px;
 }
+
+.footer_logo_div {
+  display: flex; /* Use Flexbox for alignment */
+  /* justify-content: center;  */
+  align-items: center;
+  margin-bottom: 10px; /* Optional: space between sections */
+  margin-left: 20px;
+}
+
+.footer_logo_box {
+  height: 100px;
+  width: 150px;
+  display: flex; /* Use Flexbox */
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px; /* Space between logo boxes */
+  overflow: hidden; /* Hide overflow if logos are too large */
+}
+
+.footer-logo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto; /* Maintain aspect ratio */
+}
+
+.gscl_logo {
+  margin-top: 10px;
+  height: 70px; /* Maintain aspect ratio */
+  padding: 15px;
+}

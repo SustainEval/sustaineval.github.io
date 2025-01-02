@@ -421,7 +421,7 @@ populateExp_Edu(experience, "experience");
 // populateExp_Edu(education, "education");
 // populateBlogs(tasks, "tasks");
 
-populateLinks(footer, "footer");
+// populateLinks(footer, "footer");
 
 // Select all links in the accordion
 // Select all links in the accordion
