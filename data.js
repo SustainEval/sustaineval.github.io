@@ -5,8 +5,16 @@ export const bio = [
 
 export const experience = [
   {
-    title: "Training & Development Data Release",
-    duration: "14th March 2025",
+    title: "Development Data Release",
+    duration: "12th March 2025",
+    link: "https://github.com/SustainEval/sustaineval2025_data",
+    details: [],
+    tags: [],
+    icon: "",
+  },
+  {
+    title: "Training Data Release",
+    duration: "14th April 2025",
     link: "https://github.com/SustainEval/sustaineval2025_data",
     details: [],
     tags: [],
