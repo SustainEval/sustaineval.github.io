@@ -238,9 +238,8 @@ function populateExp_Edu(items, id) {
 
     if (items[i].link !== "") {
       // Create a link element
-      let linkTimelineSublabel = document.createElement("a");
+      let linkTimelineSublabel = document.createElement("div");
       linkTimelineSublabel.className = "timeline-sublabel";
-      linkTimelineSublabel.href = items[i].link; // Set the link URL
       linkTimelineSublabel.innerHTML = items[i].link; // Set the link text
       linkTimelineSublabel.className = "on_blue underline";
 

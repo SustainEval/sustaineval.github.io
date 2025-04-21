@@ -1,36 +1,36 @@
 export const bio = [
   'SustainEval 2025 is an official GermEval shared task co-located with the <a class="underline" href="https://konvens-2025.hs-hannover.de/">KONVENS 2025</a> conference and sponsored by GSCL. It challenges participants to analyze German sustainability reports by focusing on two key aspects: content and verifiability. Participants have the opportunity to explore various ML and NLP methods to address these challenges.',
-  "",
+  "Important Links: <a class='underline' href='https://github.com/SustainEval/sustaineval2025_data'>Data</a>, Registration: <a class='underline' href='https://www.codabench.org/competitions/7630/'>Task A</a> / <a class='underline' href='https://www.codabench.org/competitions/7633/'>Task B</a>",
 ];
 
 export const experience = [
   {
     title: "Development Data Release",
-    duration: "12th March 2025",
-    link: "https://github.com/SustainEval/sustaineval2025_data",
+    duration: "12th of March",
+    link: "",
     details: [],
     tags: [],
     icon: "",
   },
   {
-    title: "Training Data Release",
-    duration: "14th April 2025",
-    link: "https://github.com/SustainEval/sustaineval2025_data",
+    title: "Training Data Release / Start Validation Phase",
+    duration: "14th of April",
+    link: "<a class='on_blue underline' href='https://github.com/SustainEval/sustaineval2025_data'>Data</a>, Registration: <a class='on_blue underline' href='https://www.codabench.org/competitions/7630/'>Task A</a> / <a class='on_blue underline' href='https://www.codabench.org/competitions/7633/'>Task B</a>",
     details: [],
     tags: [],
     icon: "",
   },
   {
-    title: "Registration Deadline",
-    duration: "10th June 2025",
-    link: "..link to registration will be here..",
+    title: "Registration Deadline / Start Evaluation Phase",
+    duration: "10th of June",
+    link: "",
     details: [],
     tags: [],
     icon: "",
   },
   {
     title: "System/Results Submission Deadline",
-    duration: "27th June 2025",
+    duration: "27th of June",
     link: "",
     details: [],
     tags: [],
@@ -38,7 +38,15 @@ export const experience = [
   },
   {
     title: "System Paper Submission Deadline",
-    duration: "11th July 2025",
+    duration: "11th of July",
+    link: "",
+    details: [],
+    tags: [],
+    icon: "",
+  },
+  {
+    title: "Camera-ready Deadline",
+    duration: "15th of August",
     link: "",
     details: [],
     tags: [],
@@ -46,7 +54,7 @@ export const experience = [
   },
   {
     title: "Workshop & Final Presentation",
-    duration: "10th September 2025",
+    duration: "10th of September",
     link: "",
     details: [],
     tags: [],
