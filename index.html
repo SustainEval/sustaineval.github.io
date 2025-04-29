@@ -46,6 +46,7 @@
                 <a href="#" data-nav-section="important_dates">Important Dates</a>
               </li>
               <li><a href="#" data-nav-section="tasks">Subtasks</a></li>
+              <li><a href="#" data-nav-section="dataset-info">Dataset Information</a></li>
               <li><a href="#" data-nav-section="q_and_a">Questions & Answers</a></li>
               <li><a href="#" data-nav-section="contact">Contact</a></li>
               
@@ -254,6 +255,73 @@
             </div>
           </section> -->
         <!--------------------[END] Registration -------------------------->
+        <!--------------------[START] Dataset Information---------------------------->
+        <section class="colorlib-about" data-section="dataset-info">
+          <div class="colorlib-narrow-content">
+            <div class="row animate-box" data-animate-effect="fadeInLeft">
+              <div class="about-desc">
+                <h1>Dataset Information</h1>
+                <h2>Data Source</h2>
+                <p>
+                  The training data (ca. 1000 samples), development data (ca. 300 samples), and evaluation data (ca. 500 samples) are constructed from publicly available German-language company reports indexed in the German Sustainability Code (Deutscher Nachhaltigkeitskodex, DNK).
+                </p>
+                <p>
+                  DNK reports always follow the same structure, consisting of 20 sections, each corresponding to a reporting criterion (e.g. `Incentive Systems' or `Usage of Natural Resources').
+                  Each criterion section not only deals with a separate topic, but also fulfills a particular communicative purpose, which is reflected in the hierarchical structure of the report outline.
+                </p>
+                <p>
+                  One goal of this shared task is to determine the extent to which the texts pertaining to the different sections diverge not only in content but also style and other linguistic properties.
+                </p>
+                <p>
+                  Each input to be analyzed in Tasks A and B is a text snippet of 4 consecutive sentences.
+                  Text snippets are selected semi-automatically, based mostly on balanced random sampling, with some filtering steps to exclude structured data such as tables, and personally identifiable information.
+                </p>
+
+                <h2>Anonymization</h2>
+                <p>
+                  The text snippets are preprocessed with a named entity recognition (NER) tool, and then checked manually for further personally identifiable information. Personally identifiable words or phrases are replaced by one of the tags below:
+                </p>
+                <ul>
+                  <li>[ORG] - Names of companies and organizations</li>
+                  <li>[PERSON] - Names of persons</li>
+                  <li>[PRODUCT] - Products of a company or organization, e.g. name of a software</li>
+                  <li>[KONTAKT] - Addresses, phone numbers, emails</li>
+                  <li>[LINK] - Links</li>
+                  <li>[NAME] - Everything else that might identify a company or person but does not fit one of the other categories</li>
+                </ul>
+                <p>
+                  Location names (e.g. Berlin) and general terms for types of companies (e.g. Sparkassen) are not anonymized, except if they are part of the name of a specific organization (e.g. Stadtsparkasse Augsburg).
+                  Certain large government and non-government organizations referenced in their role of establishing sustainability reporting standards, such as laws and certificates, are not anonymized.
+                </p>
+
+                <h2>Data Annotation</h2>
+                <p>
+                  <strong>Task A:</strong> The challenge is to assign a suitable content class to each text sample. The label for each instance is the name of the DNK reporting criterion section the text snippet was sampled from.
+                </p>
+                <p>
+                  <strong>Task B:</strong> The challenge is to rate the verifiability of the statement (e.g. goal or state description) made in the last sentence of each text snippet, with the previous sentences given as context for better understanding. We use a numerical score between 0.0 (not verifiable) and 1.0 (clearly verifiable), and predictions will be evaluated by their Kendall Tau-b rank correlation with human ratings.
+                </p>
+                <p>
+                  Task B ratings are derived from human annotation on a four-point scale:
+                </p>
+                <ul>
+                  <li>Not verifiable (0.0)</li>
+                  <li>Rather not verifiable (0.33)</li>
+                  <li>Somewhat verifiable (0.67)</li>
+                  <li>Clearly verifiable (1.0)</li>
+                </ul>
+                <p>
+                  The annotation was executed via paid crowdsourcing. We collected ~5 crowd annotations per sample, took the majority vote, and in the case where the vote was tied, computed the arithmetic mean between the tied values. In these cases, we also report the standard deviation over the tied values (in cases where there was a unique majority vote, the standard deviation is 0.0). The information about the standard deviation is not strictly part of the shared task, but may be used by participants to gain insight into the uncertainty/difficulty of individual samples.
+                </p>
+                <p>
+                  <strong>IMPORTANT:</strong> Participants should not rely on standard deviation (task_b_stdev) and publication year of the sample to make their predictions, as this information may not be given in the final evaluation data. The evaluation data will also contain reports from the years 2022 and 2023, whereas the training, development, and validation data only spans 2017-2021.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--------------------[END] Dataset Information---------------------------->
+
         <!--------------------[START] Questions & Answers -------------------------->
         <section class="colorlib-projects no-print" data-section="q_and_a">
           <div class="colorlib-narrow-content">
